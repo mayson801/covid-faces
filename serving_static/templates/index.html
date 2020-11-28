@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title>Flask Shop</title>
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <style>
+      .help {
+    height: 101%;
+    padding:0px;
+    margin: 0px;
+    }
+
+    .center_text{
+    color: black;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translate(0%, -50%);
+    transform: translate(0%, -50%);
+    width: 99.0%;
+    }
+    .faces{
+    padding:auto
+  }
+    img {
+    width:60px;
+    padding:5px;
+    }
+
+    h1{
+    margin: 0px;
+    text-align: center;
+    }
+    h2{
+    margin: 0px;
+    text-align: center;
+    }
+
+
+  </style>
+  <body>
+    <div class="help">
+      <div class="center_text">
+      <h1 >{{message}}</h1>
+      <h2>UK covid Deaths</h2>
+      </div>
+    </div>
+    <div class=faces">{{faces|safe}}</div>
+  </body>
+</html>
