@@ -1,1 +1,1 @@
-web: gunicorn data_visualtion:server
+web: gunicorn covid_faces1:server
