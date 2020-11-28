@@ -3,7 +3,6 @@ from PIL import Image
 import time
 import os
 import shutil
-from datetime import datetime
 
 def get_total_faces():
    img_folder_path = 'D:\covid_faces\serving_static\static\people'
