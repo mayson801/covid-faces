@@ -2,6 +2,7 @@ from flask import Flask
 from flask import render_template
 
 app = Flask(__name__)
+@app.route("/")
 def pass_to_index():
     total_count = get_total_faces()
     faces=get_faces(total_count)
