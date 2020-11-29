@@ -11,9 +11,9 @@ def pass_to_index():
 def get_total_faces():
     plz=(os.path.dirname(os.getcwd()))
     print(plz)
-    img_folder_path = '/static/people'
+    img_folder_path = plz + '/serving_static/static/people'
     dirListing = os.listdir(img_folder_path)
-    return dirListing
+    return len(dirListing)
 def get_faces(covidcases):
     i=1
     while i<covidcases:
