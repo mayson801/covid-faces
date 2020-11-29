@@ -7,15 +7,10 @@ app = Flask(__name__)
 def pass_to_index():
     total_count = get_total_faces()
     faces=get_faces(total_count)
-    helps = count_index()
-    comeon = ""
-    for i in helps:
-        comeon = comeon + "--------------------------" + str(i)
-    print(comeon)
-    return render_template('index.html', faces=comeon, message=str(total_count))
+    return render_template('index.html', faces=faces, message=str(total_count))
 def get_total_faces():
     plz=(os.getcwd())
-    img_folder_path = plz + '/serving_static'
+    img_folder_path = plz + '/serving_static/static/people'
     dirListing = os.listdir(img_folder_path)
     return len(dirListing)
 def get_faces(covidcases):
@@ -27,10 +22,5 @@ def get_faces(covidcases):
             faces = faces + "<img src = /static/people/person" + str(i) + ".jpg alt =" + str(i) +">"
         i = i + 1
     return faces
-def count_index():
-    plz=(os.getcwd())
-    img_folder_path = plz + '/serving_static/static/people'
-    dirListing = os.listdir(img_folder_path)
-    return dirListing
 if __name__ == "__main__":
     app.run(debug=True)
