@@ -29,7 +29,7 @@ def get_faces(covidcases):
     return faces
 def count_index():
     plz=(os.getcwd())
-    img_folder_path = plz
+    img_folder_path = plz + '/serving_static'
     dirListing = os.listdir(img_folder_path)
     return dirListing
 if __name__ == "__main__":
