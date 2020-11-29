@@ -9,9 +9,9 @@ def pass_to_index():
     faces=get_faces(total_count)
     return render_template('index.html', faces=faces, message=str(total_count))
 def get_total_faces():
-    plz=(os.path.dirname(os.getcwd()))
+    plz=(os.getcwd())
     print(plz)
-    img_folder_path = plz + '/serving_static/static/people'
+    img_folder_path = plz
     dirListing = os.listdir(img_folder_path)
     return len(dirListing)
 def get_faces(covidcases):
