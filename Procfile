@@ -1,1 +1,1 @@
-web: gunicorn serve:app
+web: gunicorn serving_static\serve:app
