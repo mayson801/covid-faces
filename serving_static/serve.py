@@ -1,5 +1,6 @@
 from flask import Flask
 from flask import render_template
+import os
 
 app = Flask(__name__)
 @app.route("/")
@@ -8,8 +9,8 @@ def pass_to_index():
     faces=get_faces(total_count)
     return render_template('index.html', faces=faces, message=str(total_count))
 def get_total_faces():
-    import os
-    img_folder_path = 'D:\covid_faces\serving_static\static\people'
+    cwd = os.getcwd()
+    img_folder_path = cwd + '/static/people'
     dirListing = os.listdir(img_folder_path)
     return len(dirListing)
 def get_faces(covidcases):
