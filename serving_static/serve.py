@@ -14,8 +14,7 @@ def pass_to_index():
     print(comeon)
     return render_template('index.html', faces=comeon, message=str(total_count))
 def get_total_faces():
-    plz=(os.path.dirname(os.getcwd()))
-    print(plz)
+    plz=(os.getcwd())
     img_folder_path = plz
     dirListing = os.listdir(img_folder_path)
     return len(dirListing)
