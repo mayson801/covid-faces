@@ -4,12 +4,15 @@ import os
 
 app = Flask(__name__)
 @app.route("/")
-
-#def get_total_faces():
-   # cwd = os.getcwd()
-  #  img_folder_path = cwd + '\serving_static\static\people'
- #   dirListing = os.listdir(img_folder_path)
-#    return len(dirListing)
+def pass_to_index():
+    total_count = get_total_faces()
+    faces=get_faces(total_count)
+    return render_template('index.html', faces=faces, message=str(total_count))
+def get_total_faces():
+    #cwd = os.getcwd()
+    #img_folder_path = cwd + '\static\people'
+    #dirListing = os.listdir(img_folder_path)
+    return 10
 def get_faces(covidcases):
     i=1
     while i<covidcases:
@@ -19,10 +22,5 @@ def get_faces(covidcases):
             faces = faces + "<img src = /static/people/person" + str(i) + ".jpg alt =" + str(i) +">"
         i = i + 1
     return faces
-
-def pass_to_index():
-    total_count = 10
-    faces=get_faces(total_count)
-    return render_template('index.html', faces=faces, message=str(total_count))
 if __name__ == "__main__":
     app.run(debug=True)
