@@ -34,11 +34,11 @@ def newcases():
    newcase_number=40000
    return newcase_number
 
-#total_faces = get_total_faces()
-#total_to_move = get_total_faces_temp()
-#i= 1
+total_faces = get_total_faces()
+total_to_move = get_total_faces_temp()
+i= 1
 
-#get_images_from_website(newcases(),total_faces)
-#while i <= total_to_move:
-#   move_images(total_faces+i)
-#   i=i+1
+get_images_from_website(newcases(),total_faces)
+while i <= total_to_move:
+   move_images(total_faces+i)
+   i=i+1
