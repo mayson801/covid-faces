@@ -8,13 +8,12 @@ import shutil
 def get_total_faces():
    img_folder_path = file_directory + '/serving_static/static/people'
    dirListing = os.listdir(img_folder_path)
-   print(dirListing)
    return len(dirListing)
 
 def get_total_faces_temp():
    img_folder_path = file_directory + '/serving_static/static/people'
    dirListing = os.listdir(img_folder_path)
-   return len(dirListing)
+   return len(dirListing)-1
 
 def get_images_from_website(newcases,images_generated):
 
@@ -26,7 +25,7 @@ def get_images_from_website(newcases,images_generated):
       print(images_generated)
       img_data = requests.get("https://thispersondoesnotexist.com/image").content
       with open(file_directory + '/serving_static/static/-temp/person'+str(images_generated)+'.jpg', 'wb') as handler:
-         handler.write(img_data )
+         handler.write(img_data)
       foo = Image.open(file_directory + "/serving_static/static/-temp/person" + str(images_generated) + ".jpg")
       foo = foo.resize((120,120),Image.ANTIALIAS)
       foo.save(file_directory + "/serving_static/static/-temp/person" + str(images_generated) + ".jpg",optimize=True,quality=80)
