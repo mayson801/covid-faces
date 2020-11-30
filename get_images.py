@@ -4,13 +4,14 @@ import time
 import os
 import shutil
 
+
 def get_total_faces():
-   img_folder_path = 'D:\covid_faces\serving_static\static\people'
+   img_folder_path = file_directory + '/serving_static/static/people'
    dirListing = os.listdir(img_folder_path)
    return len(dirListing)
 
 def get_total_faces_temp():
-   img_folder_path = 'D:\covid_faces\serving_static\static\-temp'
+   img_folder_path = file_directory + '/serving_static/static/people'
    dirListing = os.listdir(img_folder_path)
    return len(dirListing)
 
