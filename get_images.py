@@ -50,3 +50,4 @@ def main():
 if __name__ == "__main__":
    file_directory = (os.getcwd())
    main()
+   print(get_total_faces())
