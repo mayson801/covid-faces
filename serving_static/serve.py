@@ -10,6 +10,9 @@ def pass_to_index():
     return render_template('index.html', faces=faces, message=str(total_count))
 def get_total_faces():
     plz=(os.getcwd())
+    #for testing on local machine use the line below and comment out img_folder_path
+    # this is because file scructure is slightly diffrent on heroku
+    #img_folder_path = plz + '/static/people'
     img_folder_path = plz + '/serving_static/static/people'
     dirListing = os.listdir(img_folder_path)
     return len(dirListing)
