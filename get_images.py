@@ -11,7 +11,7 @@ def get_total_faces():
    return len(dirListing)
 
 def get_total_faces_temp():
-   img_folder_path = file_directory + '/serving_static/static/people'
+   img_folder_path = file_directory + '/serving_static/static/-temp'
    dirListing = os.listdir(img_folder_path)
    return len(dirListing)-1
 
