@@ -8,6 +8,7 @@ import shutil
 def get_total_faces():
    img_folder_path = file_directory + '/serving_static/static/people'
    dirListing = os.listdir(img_folder_path)
+   print(dirListing)
    return len(dirListing)
 
 def get_total_faces_temp():
@@ -45,6 +46,7 @@ def main():
    while i <= total_to_move:
       move_images(total_faces+i)
       i=i+1
+   print()
 
 if __name__ == "__main__":
    file_directory = (os.getcwd())
